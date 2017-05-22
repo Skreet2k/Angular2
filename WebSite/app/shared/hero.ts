@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  template: `<hero-form-reactive3></hero-form-reactive3>`
-})
-export class AppComponent { }
+export class Hero {
+  constructor(
+    public id: number,
+    public name: string,
+    public power: string,
+    public alterEgo?: string
+  ) {  }
+}
 
 
 /*

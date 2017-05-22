@@ -6,28 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var hero_form_reactive_module_1 = require("./reactive/hero-form-reactive.module");
-var AppModule = (function () {
-    function AppModule() {
+var forms_1 = require("@angular/forms");
+var shared_module_1 = require("../shared/shared.module");
+var hero_form_reactive_component_1 = require("./hero-form-reactive.component");
+var HeroFormReactiveModule = (function () {
+    function HeroFormReactiveModule() {
     }
-    return AppModule;
+    return HeroFormReactiveModule;
 }());
-AppModule = __decorate([
+HeroFormReactiveModule = __decorate([
     core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            hero_form_reactive_module_1.HeroFormReactiveModule
-        ],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [shared_module_1.SharedModule, forms_1.ReactiveFormsModule],
+        declarations: [hero_form_reactive_component_1.HeroFormReactiveComponent],
+        exports: [hero_form_reactive_component_1.HeroFormReactiveComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
+], HeroFormReactiveModule);
+exports.HeroFormReactiveModule = HeroFormReactiveModule;
 /*
 Copyright 2017 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */ 
-//# sourceMappingURL=app.module.js.map
+//# sourceMappingURL=hero-form-reactive.module.js.map

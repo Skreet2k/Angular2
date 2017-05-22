@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-@Component({
-  selector: 'my-app',
-  template: `<hero-form-reactive3></hero-form-reactive3>`
-})
-export class AppComponent { }
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
 
 
 /*
